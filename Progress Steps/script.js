@@ -3,23 +3,23 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const circles = document.querySelectorAll(".circle");
 
-let currentActive = 1;
+let current = 1;
 
 next.addEventListener("click", () => {
-  currentActive++;
+  current++;
 
-  if (currentActive > circles.length) {
-    currentActive = circles.length;
+  if (current > circles.length) {
+    current = circles.length;
   }
 
   update();
 });
 
 prev.addEventListener("click", () => {
-  currentActive--;
+  current--;
 
-  if (currentActive < 1) {
-    currentActive = 1;
+  if (current < 1) {
+    current = 1;
   }
 
   update();
@@ -27,21 +27,20 @@ prev.addEventListener("click", () => {
 
 function update() {
   circles.forEach((circle, idx) => {
-    if (idx < currentActive) {
-      circle.classList.add("active");
+    if (idx < current) {
+      circle.classList.add("");
     } else {
-      circle.classList.remove("active");
+      circle.classList.remove("");
     }
   });
 
-  const actives = document.querySelectorAll(".active");
+  const s = document.querySelectorAll(".");
 
-  progress.style.width =
-    ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
+  progress.style.width = ((s.length - 1) / (circles.length - 1)) * 100 + "%";
 
-  if (currentActive === 1) {
+  if (current === 1) {
     prev.disalbed = true;
-  } else if (currentActive === circles.length) {
+  } else if (current === circles.length) {
     next.disabled = true;
   } else {
     prev.disabled = false;

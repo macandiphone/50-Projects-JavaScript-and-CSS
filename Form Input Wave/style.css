@@ -18,12 +18,12 @@ body {
 }
 
 .container {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   border-radius: 5px;
 }
 
-.container h1{
+.container h1 {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -45,11 +45,11 @@ body {
   border-radius: 5px;
 }
 
-.btn:active{
+.btn: {
   transform: scale(0.98);
 }
 
-.btn:focus{
+.btn:focus {
   outline: 0;
 }
 
@@ -74,12 +74,13 @@ body {
   color: #fff;
 }
 
-.form-control input:focus, .form-control input:valid {
+.form-control input:focus,
+.form-control input:valid {
   outline: 0;
   border-bottom-color: lightblue;
 }
 
-.form-control label{
+.form-control label {
   position: absolute;
   top: 15px;
   left: 0;
@@ -89,7 +90,7 @@ body {
   display: inline-block;
   font-size: 18px;
   min-width: 5px;
-  transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .form-control input:focus + label span,
